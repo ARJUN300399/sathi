@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>security</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <div></div>
+    <div>
+        <div class="header-dark">
+            <div class="container hero"><div class="row">
+    <div class="col" style="font-size:46px;"><a href="button.html"><button class="btn btn-primary" type="button">Contacts</button></a><a href="nearps.html"><button class="btn btn-primary" type="button">Nearest PS</button></a><a href="emergency.html"><button class="btn btn-primary" type="button" style="background-color: red">Emergency</button></a><button class="btn btn-primary" type="button">Call Police</button>
+        <div
+            class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="background-image:url(&quot;mountain_bg.jpg&quot;);font-size:10px;">Govt. links</button>
+            <div role="menu" class="dropdown-menu">
+                <h6 role="presentation" class="dropdown-header" style="line-height:8px;font-size:10px;"><br /><a href="https://labour.gov.in/industrial-safety-health">https://labour.gov.in/industrial-safety-health</a><br /><br /></h6>
+                <h6 role="presentation" class="dropdown-header" style="font-size:11px;"><br /><a href="http://cyberjournalist.org.in/links.html">http://cyberjournalist.org.in/links.html</a><br /><br /></h6>
+            </div>
+    </div>
+</div>
+<div class="col-md-8 offset-md-2"> 
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+  <body style="background-image: url(./img/blue_yellow_light_115379772.jpg); background-size: cover">
+    <div id="map"></div>
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('complain registered for this positon');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA-Im2IKdw1apnbTrofCJijKAJMOQBM9s&callback=initMap">
+    </script>
+       
+
+</div>
+</div></div>
+        </div>
+    </div>
+        
+    <header></header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
